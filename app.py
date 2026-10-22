@@ -25,12 +25,51 @@ bundle = load_model()
 model = bundle['model']
 threshold = bundle['threshold']
 
-# Step 3: Application title
-st.title("🏦 Bank Customer Churn Prediction")
+# Step 3: Professional Dashboard Header
+
+st.title("🏦 Banking Intelligence Dashboard")
+
+st.markdown(
+    "### AI-Powered Customer Churn Prediction"
+)
 
 st.write(
-    "Predict customer churn risk using our "
-    "trained Gradient Boosting Machine Learning model."
+    "Analyze customer profiles and estimate churn risk "
+    "using our trained Gradient Boosting model."
+)
+
+st.divider()
+
+# Model Performance KPI Cards
+st.subheader("📊 Model Performance Overview")
+
+col1, col2, col3 = st.columns(3)
+
+with col1:
+    st.metric(
+        label="Model Accuracy",
+        value="85.30%"
+    )
+
+with col2:
+    st.metric(
+        label="Model Recall",
+        value="65.36%"
+    )
+
+with col3:
+    st.metric(
+        label="Model F1-Score",
+        value="64.41%"
+    )
+
+st.caption(
+    "Metrics are from exploratory test evaluation."
+)
+
+st.info(
+    "🤖 Selected Model: Gradient Boosting | "
+    f"Prediction Threshold: {threshold * 100:.0f}%"
 )
 
 st.divider()

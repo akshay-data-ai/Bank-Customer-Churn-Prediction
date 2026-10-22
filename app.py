@@ -182,32 +182,62 @@ if submitted:
 
     prediction = int(probability >= threshold)
 
-    # Step 6: Display prediction results
+    
+    # Step 6: Professional Prediction Results
     st.divider()
-    st.subheader("Prediction Results")
 
-    st.metric(
-        "Estimated Churn Score",
-        f"{probability * 100:.2f}%"
-    )
+    st.subheader("🔍 Customer Churn Risk Assessment")
 
-    st.progress(float(probability))
+    with st.container(border=True):
 
-    st.write(
-        f"Classification Threshold: {threshold * 100:.0f}%"
-    )
+        col1, col2 = st.columns(2)
 
-    if prediction == 1:
-        st.warning("Customer Likely to Leave the Bank")
-    else:
-        st.success("Customer Likely to Stay with the Bank")
+        with col1:
+            st.metric(
+                label="Estimated Churn Score",
+                value=f"{probability * 100:.2f}%"
+            )
+
+        with col2:
+            st.metric(
+                label="Decision Threshold",
+                value=f"{threshold * 100:.0f}%"
+            )
+
+        st.progress(
+            float(probability),
+            text="Customer Churn Risk Score"
+        )
+
+        st.write("### Prediction Outcome")
+
+        if prediction == 1:
+            st.warning(
+                "⚠️ Customer Likely to Leave the Bank"
+            )
+
+            st.write(
+                "The model estimates a churn score "
+                "above the selected threshold. "
+                "This customer may warrant further "
+                "retention analysis."
+            )
+
+        else:
+            st.success(
+                "✅ Customer Likely to Stay with the Bank"
+            )
+
+            st.write(
+                "The model estimates a churn score "
+                "below the selected threshold."
+            )
 
     st.caption(
-        "Educational prediction only. Model probabilities "
-        "are not yet calibrated or independently validated "
-        "for real-world banking decisions."
+        "Educational model estimate only. "
+        "Probabilities are not independently calibrated "
+        "or validated for real-world banking decisions."
     )
-
 # Step 7: Footer
 st.divider()
 st.caption(

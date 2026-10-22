@@ -17,8 +17,11 @@ Enter customer details to generate a churn risk score
 using our trained Gradient Boosting model.
 
 **Selected Model:** Gradient Boosting
+
 **Classification Threshold:** 0.30
+
 **Recall:** 65.36%
+
 **F1-Score:** 64.41%
 
 *Metrics are from exploratory test evaluation.*

@@ -1,0 +1,20 @@
+
+# Professional Banking Dashboard Theme
+
+[theme]
+base = "light"
+
+# Banking blue accent
+primaryColor = "#123B63"
+
+# Main application background
+backgroundColor = "#FFFFFF"
+
+# Input widgets and secondary areas
+secondaryBackgroundColor = "#EAF1F8"
+
+# Text color
+textColor = "#1C3047"
+
+# Font
+font = "sans serif"

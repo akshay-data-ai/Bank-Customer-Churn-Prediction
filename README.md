@@ -6,6 +6,23 @@ An end-to-end Machine Learning project designed to analyze bank customer behavio
 
 The project includes Exploratory Data Analysis (EDA), preprocessing, model training, model evaluation, cross-validation, threshold tuning, feature importance analysis, and an interactive Streamlit application.
 
+
+## 🚀 Live Streamlit Application
+
+Try the deployed Bank Customer Churn Prediction app:
+
+🔗 Live Application : https://bank-customer-churn-ai.streamlit.app/
+
+Enter customer details to generate a churn risk score
+using our trained Gradient Boosting model.
+
+**Selected Model:** Gradient Boosting
+**Classification Threshold:** 0.30
+**Recall:** 65.36%
+**F1-Score:** 64.41%
+
+*Metrics are from exploratory test evaluation.*
+
 ## Business Objective
 
 Identify customers who are at risk of leaving the bank and provide data-driven insights to support customer retention strategies.
